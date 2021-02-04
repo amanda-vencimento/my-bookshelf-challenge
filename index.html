@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <title>My Bookshelf Challenge</title>
+</head>
+<body>
+
+    <header>
+
+        <div id="header">
+            <img src="./assets/imgs/icons/profile_icon.jpg" alt="Girl reading">
+
+            <h1 id="logo">- My Bookshelf Challenge -</h1>
+            
+            <p id="description">My goal is to read all the books on my shelves that I haven't read yet.</p>
+        </div>
+
+        <div id="icons">
+            <ul>
+                <li class="font-icon"><a class="fa fa-github-alt" href="https://github.com/amanda-vencimento"></a></li>
+                <li class="font-icon"> <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/amanda-vencimento/"></a></li>
+                <li><img class="img-icon goodreads" src="./assets/imgs/icons/logos/goodreads_icon.png" alt="Logo Goodreads"></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="on-my-shelf">
+            <h2 class="sr-only">｢ TBR ｣</h2>
+
+            <div class="card">
+                <h3>
+                    <span>Books Read</span>
+                    <img src="./assets/imgs/icons/svg/checked_icon.svg" alt="Checked mark">
+                </h3>
+                <p class="card-description">Books read so far</p>
+                <p class="card-number">2 books</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>Extra TBR</span>
+                    <img src="./assets/imgs/icons/svg/bookmark.svg" alt="Stack of books">
+                </h3>
+                <p class="card-description">Books I plan to read despite not being my goal.</p>
+                <p class="card-number">5 books</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>2021 Goal</span>
+                    <img src="./assets/imgs/icons/svg/extra_books.svg" alt="Bookmark">
+                </h3>
+                <p></p>
+                <p class="card-number">22 books</p>
+            </div>
+        </section>
+
+        <section id="bookshelf">
+            <h2 class="sr-only">｢ Bookshelf ｣</h2>
+
+            <a href="#" onclick="Modal.open()" class="button new">Add a new book</a>
+
+            <div>
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th class="book-cover">Book Cover</th>
+                            <th class="title">Title</th>
+                            <th class="author">Author</th>
+                            <th class="type">Type</th>
+                            <th class="status">Status</th>
+                            <th class="date-start">Started</th>
+                            <th class="date-finished">Finished</th>
+                            <th class="rating">Rating</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="book-cover"><img src="./assets/imgs/book covers/Ivanhoe_Book_Cover.jpeg" alt="Harry Potter and the Philoshopher's Stone book cover"></th>
+                            <td class="title">Ivanhoe</td>
+                            <td class="author">Walter Scott</td>
+                            <td class="type">Book</td>
+                            <td class="status read">Read</td>
+                            <td class="date-start">05/01/2021</td>
+                            <td class="date-finished">20/01/2021</td>
+                            <td class="rating">
+                                <span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star-half-empty" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span></td>
+                            <td>
+                                    <img src="./assets/imgs/icons/svg/delete_icon.svg" alt="Delete icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="book-cover"><img src="./assets/imgs/book covers/The_Sunday_Gentleman_Book_Cover.jpg" alt="The Sunday Gentleman Book Cover"></th>
+                            <td class="title">The Sunday Gentleman</td>
+                            <td class="author">Irving Wallace</td>
+                            <td class="type">Book</td>
+                            <td class="status read">Read</td>
+                            <td class="date-start">05/01/2021</td>
+                            <td class="date-finished">20/01/2021</td>
+                            <td class="rating">
+                                <span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star" aria-hidden="true"></span><span class="fa fa-star-half-empty" aria-hidden="true"></span>
+                            </td>
+                            <td>
+                                <img src="./assets/imgs/icons/svg/delete_icon.svg" alt="Delete icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="book-cover"><img src="./assets/imgs/book covers/HunterXHunter_Vol_1_Manga_Front_Cover.jpeg" alt="Hunter x Hunter Manga Volume 6 Cover"></th>
+                            <td class="title">HUNTERXHUNTER - Vol 6</td>
+                            <td class="author">Yoshihiro Togashi</td>
+                            <td class="type">Manga</td>
+                            <td class="status tbr">TBR</td>
+                            <td class="date-start">-</td>
+                            <td class="date-finished">-</td>
+                            <td class="rating">
+                                <span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span>
+                            </td>
+                            <td>
+                                <img src="./assets/imgs/icons/svg/delete_icon.svg" alt="Delete icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="book-cover"><img src="./assets/imgs/book covers/The_Golden_Compass_Book_Cover.jpg" alt="The Golden Compass Book Cover"></th>
+                            <td class="title">The Golden Compass</td>
+                            <td class="author">Phillip Pullman</td>
+                            <td class="type">Book</td>
+                            <td class="status dnf">DNF</td>
+                            <td class="date-start">-</td>
+                            <td class="date-finished">-</td>
+                            <td class="rating">
+                                <span class="fa fa-star-half-empty" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span><span class="fa fa-star-o" aria-hidden="true"></span>
+                            </td>
+                            <td>
+                                <img src="./assets/imgs/icons/svg/delete_icon.svg" alt="Delete icon">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Insert New Book</h2>
+                <form>
+                    <div class="input-group">
+                        <label class="sr-only" for="book-title">Title</label>
+                        <input type="text" autocapitalize="words" id="book-title" name="book-title" placeholder="Book Title">
+                        
+                        <label class="sr-only" for="book-author">Author</label>
+                        <input type="text" autocapitalize="words" id="book-author" name="book-author" placeholder="Author">
+
+                        <label class="sr-only" for="book-type">Type</label>
+                        <input type="text" id="book-type" name="book-type" placeholder="Type">
+
+                        <label class="sr-only" for="book-status">Status</label>
+                        <input type="text" autocapitalize="words" id="book-status" name="book-status" placeholder="Status">
+
+                        <label for="book-started" class="sr-only">Started</label>
+                        <input type="date" id="book-started" name="book-started" placeholder="01/01/2021">
+
+                        <label for="book-finished" class="sr-only">Finished</label>
+                        <input type="date" id="book-finished" name="book-finished" placeholder="01/01/2021">
+
+                        <label class="sr-only" for="book-rating">Rating</label>
+                        <input type="text" id="book-rating" name="book-rating" placeholder="Rating">
+                        
+                        <label class="sr-only" for="book-cover">Book Cover</label>
+                        <input type="file" id="book-cover" name="book-cover" accept="image/png, image/jpeg, image/jpg">
+
+                        <div class="input-group actions">
+                            <a href="#" onclick="Modal.close()" class="button cancel">Cancel</a>
+                            <button class="update-button">Update bookshelf</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>dev.reads by Amanda Vencimento</footer>
+
+    <!-- <script>
+        let Modal = {
+            open(){
+                /* This is where we'll set the modal to be active by allowing it to use the active class*/
+                document.querySelector('.modal-overlay')
+                .classList.add('active')
+            },
+            close(){
+
+                /*This is where the modal will close, removing the activve class*/
+                document.querySelector('.modal-overlay')
+                .classList.remove('active')
+            }
+        }
+    </script> -->
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
